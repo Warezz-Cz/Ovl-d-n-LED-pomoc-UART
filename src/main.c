@@ -21,11 +21,12 @@ void init(void)
 int main(void)
 {
     uint32_t time = 0;
+    extern uint16_t led6time;
     
     init();
 
     while (1) {
-        if (milis() - time > 333){
+        if (milis() - time > led6time){
             time = milis();
 
             REVERSE(LED6);
