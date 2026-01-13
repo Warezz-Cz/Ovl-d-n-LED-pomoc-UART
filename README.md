@@ -4,10 +4,7 @@ UART ovládání LED project
 Účel/Zadání/Funkce
 -----------------------
 
-* parní mlátička s elektronickým vstřikováním
-    * pára
-    * píst
-    * mikroprocesor
+* pomocí kláves 1,2,3,4,5,6,7,8,9,0 ovládám rychlost blikání LED
 
 
 Schema zapojení
@@ -18,8 +15,11 @@ Schema zapojení
 Popis funkce
 -----------------------
 
-1. ono se to
-2. samo se to
+1. LED blíká rychlostí, která je uložená v proměnné
+2. UART 1 má povolené přerušení
+3. ISR od UART1-Rx nastavuje tuto proměnnou
+
+* IRS (interupt service rutine)
 
 ToDo
 -----------------------
